@@ -1,206 +1,229 @@
-/* Add your custom styles here */
-
 body {
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
-header {
-  background-color: #007BFF;
-  color: #fff;
+.header {
+  background-color: #0d8050; /* Change the color to your desired color */
   padding: 20px;
+  text-align: center;
+  color: #fff;
 }
 
-h1 {
-  margin: 0;
+.navbar {
+  background-color: #8bc34a;
+  padding: 10px;
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 10px;
+.navbar ul {
+  list-style: none;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-  display: inline-block;
+.navbar li {
   margin-right: 10px;
 }
 
-nav ul li a {
-  color: #fff;
+.navbar a {
   text-decoration: none;
+  color: #333;
 }
 
-.container {
-  margin: 20px;
+.content {
+  padding: 20px;
 }
-.login-page {
-  width: 100%;
+
+
+/* Login Container */
+
+.login-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-}
-
-.login-form {
-  width: 500px;
-  padding: 20px;
-  background-color: #f1f1f1;
-  border-radius: 4px;
-}
-
-.login-form h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.login-form .form-group {
-  margin-bottom: 10px;
-}
-
-.login-form .form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.login-form input[type="username-input"],
-.login-form input[type="password-input"] {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.login-form .login-button {
-  
-  padding: 10px;
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-#surveySection {
-  width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-}
-/* #surveySection {
-  display: none;
-  margin: 20px;
-} */
-
-/* CSS styles for the survey form */
-
-/* Container styles */
-.survey-form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-}
-
-/* Section header styles */
-.survey-form h3 {
   margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 18px;
 }
 
-/* Form group styles */
+.login-container h2 {
+  margin-bottom: 10px;
+}
+
 .form-group {
   margin-bottom: 20px;
 }
 
-.form-group label {
+label {
   display: block;
   margin-bottom: 5px;
 }
 
-.form-group input[type="text"],
-.form-group input[type="date"],
-.form-group input[type="number"],
-.form-group select ,
-.form-group input[type="tel"],
-.form-group input[type="email"] {
-padding: 5px;
-border-radius: 4px;
-border: 1px solid #ccc;
-font-size: 14px;
-width: 500px;
+input[type='text'],
+input[type='password'] {
+  padding: 5px;
+  width: 200px;
 }
 
-.contact-icon {
-  background-image: url("./icons/phone-icon.png");
-  background-repeat: no-repeat;
-  background-position: center left;
-  background-size: 20px;
-  padding-left: 30px;
-}
-
-.email-icon {
-  background-image: url("./icons/email-icon.png");
-  background-repeat: no-repeat;
-  background-position: center left;
-  background-size: 20px;
-  padding-left: 30px;
-}
-
-/* Add member button styles */
-.add-member-button {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: #4CAF50;
-  color: white;
+button {
+  padding: 10px 20px;
+  background-color: #8bc34a;
+  color: #fff;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 
-.add-member-button:hover {
-  background-color: #45a049;
+button:hover {
+  background-color: #689f38;
+}
+
+/* App.css */
+
+/* Welcome Component */
+.welcome {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.welcome h2 {
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  margin-bottom: 20px;
+}
+
+/* Survey */
+
+.start-survey {
+  padding: 10px 20px;
+  background-color: #8bc34a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.start-survey:hover {
+  background-color: #689f38;
+}
+
+/* Survey Component */
+/* .survey-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+.survey-form {
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+}
+
+.survey-form h2,
+.survey-form h3 {
+  margin-top: 0;
+}
+
+.survey-form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.survey-form-row label {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.survey-form-row input {
+  flex: 1;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+}
+
+.add-member,
+.delete-member,
+.submit-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .submit-button {
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+  background-color: #2196f3;
+} */
+.survey-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.submit-button:hover {
-  background-color: #0056b3;
-}
-
-.line-space {
-  margin-top: 10px; /* Adjust the value to control the line space */
-}
-
-footer {
-  background-color: #007BFF;
+.survey-bar {
+  background-color: #228b22;
   color: #fff;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.start-survey-button{
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
+.survey-page {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 600px;
+}
+
+.survey-title {
+  font-size: 24px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.survey-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-submit {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end;
 }
