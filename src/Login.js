@@ -55,7 +55,7 @@ const Login = ({ onLogin }) => {
 
     // For demonstration purposes, assuming authentication is successful
     onLogin();
-    navigate('/survey');
+    navigate('/welcome');
   };
 
   return (
