@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, Navigate} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 import Home from './Home';
 import Login from './Login';
@@ -22,38 +22,41 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-      <header className="header">
+        <header className="header">
           <h1>Upliftment for Poor NGO</h1>
         </header>
-        {!isLoggedIn && (
-          <nav className="navbar">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-              <li>
-                <Link to="/about">About Us</Link>
-              </li>
-            </ul>
-          </nav>
-        )}
+
+        <nav className="navbar">
+          <div className="navbar-container">
+            <div className="navbar-logo">
+            </div>
+            <div className="navbar-links">
+              {!isLoggedIn ? (
+                <>
+                  <Link to="/">Home</Link>
+                  <Link to="/about">About Us</Link>
+                  <Link to="/login">Login</Link>
+                </>
+              ) : (
+                <>
+                  <Link to="/welcome">Welcome</Link>
+                  <Link to="/survey">Survey</Link>
+                  <Link to="/" onClick={handleLogoutClick}>
+                    Logout
+                  </Link>
+                </>
+              )}
+            </div>
+          </div>
+        </nav>
 
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login onLogin={handleLoginClick} />} />
             <Route path="/about" element={<AboutUs />} />
-            {isLoggedIn ? (
-              <>
-                <Route path="/" element={<Welcome />} />
-                <Route path="/survey" element={<Survey />} />
-              </>
-            ) : (
-              <Route path="/" element={<Navigate to="/login" />} />
-            )}
+            <Route path="/welcome" element={<Welcome />} />
+            <Route path="/survey" element={<Survey />} />
           </Routes>
         </div>
       </div>

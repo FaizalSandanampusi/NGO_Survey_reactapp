@@ -4,12 +4,11 @@ const Survey = () => {
   const [formData, setFormData] = useState({
     name: '',
     age: '',
-    email: '',
-    // Add other fields as needed
+    email: ''
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value} = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -18,18 +17,22 @@ const Survey = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform form submission logic here
     console.log(formData);
+    setFormData({
+      name: '',
+      age: '',
+      email: '',
+      // Add other fields and set their initial values as needed
+    });
   };
 
   return (
     <div>
-      <div className="survey-bar">Survey Form</div>
       <div className="survey-container">
         <div className="survey-page">
           <h2 className="survey-title">Survey Form</h2>
           <form className="survey-form" onSubmit={handleSubmit}>
-            <div className="form-group">
+            <div className="form-control">
               <label htmlFor="name" className="form-label">
                 Name
               </label>
@@ -43,12 +46,12 @@ const Survey = () => {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="form-control">
               <label htmlFor="age" className="form-label">
                 Age
               </label>
               <input
-                type="number"
+                type="text"
                 id="age"
                 name="age"
                 className="form-input"
@@ -57,7 +60,7 @@ const Survey = () => {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="form-control">
               <label htmlFor="email" className="form-label">
                 Email
               </label>
@@ -71,8 +74,7 @@ const Survey = () => {
                 required
               />
             </div>
-            {/* Add other form fields as needed */}
-            <div className="form-group">
+            <div className="form-control">
               <button type="submit" className="form-submit">
                 Submit
               </button>
