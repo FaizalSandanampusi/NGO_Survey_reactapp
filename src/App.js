@@ -39,8 +39,6 @@ const App = () => {
                 </>
               ) : (
                 <>
-                  <Link to="/welcome">Welcome</Link>
-                  <Link to="/survey">Survey</Link>
                   <Link to="/" onClick={handleLogoutClick}>
                     Logout
                   </Link>
@@ -59,6 +57,14 @@ const App = () => {
             <Route path="/survey" element={<Survey />} />
           </Routes>
         </div>
+      <footer className="footer">
+          <div className="footer-container">
+            <p className="footer-text">
+              &copy; {new Date().getFullYear()} Upliftment of Poor Program. All rights reserved.
+            </p>
+            <p className="footer-text">Designed and developed by Muslim Welfare Association</p>
+          </div>
+        </footer>
       </div>
     </Router>
   );
